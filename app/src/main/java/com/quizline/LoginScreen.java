@@ -10,20 +10,28 @@ import android.widget.Toast;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.quizline.R.id.et_number_login;
+
 public class LoginScreen extends AppCompatActivity {
-private EditText et_number;
-private Button btn_login;
-private String number;
+    @BindView(R.id.et_number_login)  EditText et_number;
+    @BindView(R.id.btn_login)  Button btn_login;
+    private String number;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
-       initView();
+        ButterKnife.bind(this);
+//       initView();
+        setListener();
+
 
     }
-    public void initView(){
-        et_number=findViewById(R.id.et_number_login);
-        btn_login=findViewById(R.id.btn_login);
+
+    private void setListener() {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,5 +46,10 @@ private String number;
                 }
             }
         });
+    }
+
+    public void initView(){
+        et_number=findViewById(et_number_login);
+        btn_login=findViewById(R.id.btn_login);
     }
 }

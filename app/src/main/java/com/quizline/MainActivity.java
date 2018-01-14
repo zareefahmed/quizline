@@ -31,11 +31,23 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageView edit_image, set_image;
-    EditText et_name, et_number, et_email, et_password, et_confirm_pass;
-    TextInputLayout til_name, til_number, til_email, til_password, til_confirm_pass;
-    Button bt_register;
+    @BindView(R.id.edit_image) ImageView edit_image;
+    @BindView(R.id.iv_profile_image) ImageView set_image;
+    @BindView(R.id.et_name) EditText et_name;
+    @BindView(R.id.et_number) EditText et_number;
+    @BindView(R.id.et_email) EditText et_email;
+    @BindView(R.id.et_password) EditText et_password;
+    @BindView(R.id.et_confirm_password) EditText et_confirm_pass;
+    @BindView(R.id.til_name) TextInputLayout til_name;
+    @BindView(R.id.til_mobile) TextInputLayout til_number;
+    @BindView(R.id.til_email) TextInputLayout til_email;
+    @BindView(R.id.til_password) TextInputLayout til_password;
+    @BindView(R.id.til_confirm_pass) TextInputLayout til_confirm_pass;
+    @BindView(R.id.btn_register) Button bt_register;
     EditText editText;
     String userChoosenTask;
     private int REQUEST_CAMERA = 0;
@@ -46,23 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
+        ButterKnife.bind(this);
+//        initView();
+        setListener();
     }
 
-    public void initView() {
-        edit_image = findViewById(R.id.edit_image);
-        set_image = findViewById(R.id.iv_profile_image);
-        et_name = findViewById(R.id.et_name);
-        et_number = findViewById(R.id.et_number);
-        et_email = findViewById(R.id.et_email);
-        et_password = findViewById(R.id.et_password);
-        et_confirm_pass = findViewById(R.id.et_confirm_password);
-        bt_register = findViewById(R.id.btn_register);
-        til_name = findViewById(R.id.til_name);
-        til_number = findViewById(R.id.til_mobile);
-        til_email = findViewById(R.id.til_email);
-        til_password = findViewById(R.id.til_password);
-        til_confirm_pass = findViewById(R.id.til_confirm_pass);
+    private void setListener() {
         edit_image.setOnClickListener(this);
         bt_register.setOnClickListener(this);
         til_name.getEditText().addTextChangedListener(new TextWatcher() {
@@ -167,6 +168,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    public void initView() {
+        edit_image = findViewById(R.id.edit_image);
+        set_image = findViewById(R.id.iv_profile_image);
+        et_name = findViewById(R.id.et_name);
+        et_number = findViewById(R.id.et_number);
+        et_email = findViewById(R.id.et_email);
+        et_password = findViewById(R.id.et_password);
+        et_confirm_pass = findViewById(R.id.et_confirm_password);
+        bt_register = findViewById(R.id.btn_register);
+        til_name = findViewById(R.id.til_name);
+        til_number = findViewById(R.id.til_mobile);
+        til_email = findViewById(R.id.til_email);
+        til_password = findViewById(R.id.til_password);
+        til_confirm_pass = findViewById(R.id.til_confirm_pass);
+
+    }
+
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
@@ -200,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
 
                 }  else {
-                    Toast.makeText(this, "Please Fill All Details Correctly.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Please fill all details.", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

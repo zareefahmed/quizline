@@ -3,6 +3,7 @@
 
  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature
         android:name="android.hardware.camera.any"
@@ -19,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
- <activity android:name=".MainActivity"
+ <activity android:name=".LoginScreen"
            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginScreen"></activity>
+        <activity android:name=".QuestionScreen"></activity>
+
+        <activity android:name=".QuestionScreen2"></activity>
+
+        <activity android:name=".QuestionScreen3"></activity>
+
+        <activity android:name=".QuestionScreen4"></activity>
+
+        <activity android:name=".QuestionScreen5"></activity>
+
+        <activity android:name=".ResultScreen"></activity>
+
 
 </application>
 </manifest>

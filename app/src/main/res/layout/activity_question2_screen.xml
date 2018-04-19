@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/txt_question"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_margin="@dimen/dimen_10"
+                />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+
+                <RadioButton
+                    android:id="@+id/txt_option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="Answer Option1"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_margin="@dimen/dimen_10"
+                    />
+
+                <RadioButton
+                    android:id="@+id/txt_option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="Answer Option2"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_margin="@dimen/dimen_10"
+                    />
+
+                <RadioButton
+                    android:id="@+id/txt_option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="Answer Option3"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_margin="@dimen/dimen_10"
+                    />
+
+                <RadioButton
+                    android:id="@+id/txt_option4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="Answer Option4"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_margin="@dimen/dimen_10"
+                    />
+            </RadioGroup>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="150dp"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_height="wrap_content"
+                    android:text="Back"/>
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/dimen_10"
+    android:layout_marginRight="@dimen/dimen_10"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/et_number_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+        android:layout_marginTop="120dp"
+        android:hint="@string/loginId"
+        android:inputType="text"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dimen_10"
+        android:background="@drawable/edittext_border"
+        android:textSize="@dimen/textsize_22"/>
+
+
+    <EditText
+        android:id="@+id/et_password_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dimen_10"
+        android:textSize="@dimen/textsize_22"
+        android:layout_marginTop="@dimen/dimen_10"/>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/dimen_250"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:background="@drawable/button_border"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+</LinearLayout>
